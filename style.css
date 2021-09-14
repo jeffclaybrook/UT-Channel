@@ -1,3 +1,4 @@
+
 :root {
    --hover: #f1f3f4;
    --black: #202124;
@@ -47,13 +48,14 @@ header {
    align-items: center;
    justify-content: space-between;
    padding: .5rem 1rem;
-   z-index: 2;
+   z-index: 3;
    position: fixed;
    width: 100%;
    background: #fff;
+   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 }
 
-header section {
+header aside {
    display: flex;
    align-items: center;
 }
@@ -85,20 +87,20 @@ header .material-icons-outlined:hover {
    background: var(--hover);
 }
 
-header section:nth-of-type(2) {
+header .brand {
    margin-right: auto;
 }
 
-header section:nth-of-type(2) a {
+header .brand a {
    font-size: 1.115rem;
    color: var(--black);
 }
 
-header section:nth-of-type(4) {
+header .header-right {
    margin-left: auto;
 }
 
-header section:nth-of-type(4) .icon:nth-child(1) {
+header .header-right .icon:nth-child(1) {
    color: var(--orange);
 }
 
@@ -153,19 +155,22 @@ nav {
    background: #fff;
    position: fixed;
    top: 3.5rem;
-   left: 0;
-   max-width: 13rem;
+   left: -14rem;
+   max-width: 14rem;
    width: 100%;
-   height: 100%;
+   height: 100vh;
    padding: 1.25rem 0;
    transition: all 0.375s ease;
    overflow-y: scroll;
    display: flex;
    flex-direction: column;
+   box-shadow: 0 0 0 rgb(0 0 0 / 0%);
+   z-index: 2;
 }
 
 nav ul {
    line-height: 2.75rem;
+   padding-bottom: 3rem;
 }
 
 nav a {
@@ -215,20 +220,24 @@ nav hr {
 }
 
 nav.active {
-   left: -13rem;
+   left: 0rem;
+   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+   height: 100vh;
 }
 
 main {
-   margin-left: 13rem;
+   margin-left: 0rem;
    padding: 1.25rem 1rem 1.25rem 1rem;
    top: 3.5rem;
    position: relative;
    transition: all 0.375s ease;
+   z-index: 1;
 }
 
 nav.active + main {
-   margin-left: 0rem;
+   margin-left: 14rem;
    padding: 1.25rem 1rem 1rem 1rem;
+   z-index: 1;
 }
 
 .hero {
@@ -296,29 +305,64 @@ nav.active + main {
    margin-bottom: .125rem;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
    header {
-      padding: .5rem .375rem;
+      padding: .375rem;
+      width: 100%;
+   }
+
+   header .brand, header .search-field, header aside:nth-child(4) .icon {
+      display: none;
+   }
+
+   header .avatar {
+      width: 2rem;
+   }
+
+   nav {
+      max-width: 70%;
+      width: 100%;
+      left: -70%;
+      background: #fff;
+      top: 3rem;
+      padding: 1rem 0;
+      transition: all 0.375s ease;
+      height: 100vh;
+   }
+
+   nav ul {
+      padding-bottom: 2rem;
+   }
+
+   nav.active {
+      left: 0%;
+      top: 3rem;
+      background: #fff;
+      max-width: 70%;
+      width: 100%;
+      height: 100vh;
+      padding: 1rem 0;
+   }
+
+   nav.active ul {
+      padding-bottom: 2rem;
    }
    
-   header .hamburger {
-      display: none;
+   main {
+      margin-left: 0rem;
+      position: absolute;
+      left: 0rem;
+      top: 3rem;
+      width: 100%;
+      padding: 1rem .5rem 2rem;
    }
 
-   header .search-field {
-      display: none;
-   }
-
-   header section:nth-of-type(4) .icon {
-      display: none;
-   }
-
-   main, nav.active + main {
-      padding: .375rem;
-   }
-
-   .grid-container {
-      grid-column-gap: 0;
-      margin-top: .375rem;
+   nav.active + main {
+      margin-left: 0rem;
+      position: absolute;
+      left: 0rem;
+      width: 100%;
+      top: 3rem;
+      padding: 1rem .5rem 2rem;
    }
 }
