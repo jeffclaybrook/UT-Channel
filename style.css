@@ -367,7 +367,7 @@ nav.active + main {
    }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
    nav {
       max-width: 40%;
       width: 100%;
