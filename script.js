@@ -1,4 +1,8 @@
-let hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", function() {
-   document.querySelector("nav").classList.toggle("active");
+window.onbeforeunload = function () {
+   window.scrollTo(0, 0);
+}
+
+let menuIcon = document.getElementById("menu-icon");
+menuIcon.addEventListener("click", function() {
+   document.querySelector("nav").classList.toggle("expanded");
 })
