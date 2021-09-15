@@ -3,5 +3,4 @@
 - Replicated my Google Contacts project then replaced the content
 
 To Do:
-- Responsive behavior of index.html page
 - Entire play_video.html page + css
