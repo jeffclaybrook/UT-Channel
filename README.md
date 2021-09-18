@@ -1,6 +1,3 @@
-- UT Healthier TV channel from scratch
-- Created September 13th, 2021
-- Replicated my Google Contacts project then replaced the content
+GOOD SO FAR ON DESKTOP
 
-To Do:
-- Entire play_video.html page + css
+NEED TO UPDATE FOR TABLET/MOBILE RESPONSIVENESS

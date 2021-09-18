@@ -25,7 +25,7 @@ html {
 
 body {
    font-size: 100%;
-   font-family: 'Google Sans', sans-serif;
+   font-family: 'Google Sans', Roboto, sans-serif;
    letter-spacing: .01428571em;
 }
 
@@ -328,6 +328,114 @@ nav.expanded + main {
    margin-bottom: .125rem;
 }
 
+article {
+   display: flex;
+   justify-content: space-between;
+   gap: .75rem;
+   margin-top: 1.75rem;
+}
+
+.video-container {
+   display: flex;
+   flex-direction: column;
+   flex-basis: 70%;
+   max-width: 70%;
+}
+
+.related-videos {
+   display: flex;
+   flex-direction: column;
+   flex-basis: 30%;
+   max-width: 30%;
+}
+
+.related-video {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   margin-bottom: .75rem;
+}
+
+.related-video-thumbnail {
+   flex-basis: 45%;
+   max-width: 45%;
+   display: flex;
+   width: 100%;
+}
+
+.related-video-details {
+   flex-basis: 54%;
+   max-width: 54%;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.related-video-details h3 {
+   color: var(--black);
+   font-size: .875rem;
+   font-weight: 500;
+   line-height: calc(.8125rem + 6px);
+   margin-bottom: .25rem;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: normal;
+   -webkit-line-clamp: 2;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   word-break: break-word;
+}
+
+.related-video-details p {
+   color: var(--gray-bold);
+   font-weight: 400;
+   font-size: .875rem;
+}
+
+.video-tags {
+   margin-top: .75rem;
+   margin-bottom: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.video-tags a {
+   color: var(--orange);
+   margin-right: .675rem;
+   font-size: .875rem;
+   font-weight: 500;
+   letter-spacing: .03rem;
+}
+
+.video-container h1 {
+   font-size: 1.125rem;
+   font-weight: 500;
+   color: var(--black);
+}
+
+.video-footer {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.video-footer p {
+   font-size: .8125rem;
+}
+
+.video-footer aside {
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   margin-left: auto;
+   padding-right: .75rem;
+}
+
+.video-footer button .material-icons-outlined {
+   margin-right: .25rem;
+}
+
 @media (max-width: 768px) {
    .brand, .search-field {
       display: none;
@@ -339,6 +447,20 @@ nav.expanded + main {
 
    .hero {
       padding-top: 1.75rem;
+   }
+
+   article {
+      flex-wrap: wrap;
+   }
+
+   .video-container {
+      max-width: 100%;
+      flex-basis: 100%;
+   }
+
+   .related-videos {
+      max-width: 100%;
+      flex-basis: 100%
    }
 }
 
@@ -359,5 +481,19 @@ nav.expanded + main {
 
    nav.expanded + main {
       margin-left: 0;
+   }
+
+   article {
+      flex-wrap: wrap;
+   }
+
+   .video-container {
+      max-width: 100%;
+      flex-basis: 100%;
+   }
+
+   .related-videos {
+      max-width: 100%;
+      flex-basis: 100%
    }
 }
