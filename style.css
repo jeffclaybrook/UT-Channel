@@ -437,6 +437,10 @@ article {
 }
 
 @media (max-width: 768px) {
+   header {
+      padding: .5rem .25rem;
+   }
+   
    .brand, .search-field {
       display: none;
    }
@@ -469,6 +473,10 @@ article {
 }
 
 @media (max-width: 992px) {
+   header {
+      padding: .5rem .5rem;
+   }
+   
    .brand .logo {
       display: flex;
    }
