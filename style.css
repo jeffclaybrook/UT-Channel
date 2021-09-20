@@ -265,7 +265,7 @@ nav.expanded + main {
 .hero img {
    width: 100%;
    display: flex;
-   border-radius: .5rem;
+   border-radius: .25rem;
 }
 
 .grid-container {
@@ -287,7 +287,7 @@ nav.expanded + main {
 
 .card-media img {
    width: 100%;
-   border-radius: .325rem;
+   border-radius: .25rem;
    display: flex;
 }
 
