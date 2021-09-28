@@ -211,19 +211,19 @@ nav .material-icons-outlined {
    vertical-align: middle;
 }
 
-nav a:hover {
+nav li:hover a {
    background: var(--hover);
    color: var(--black);
    border-radius: 0 1.5rem 1.5rem 0;
 }
 
-nav a.active {
+nav li.active a {
    background: rgba(191, 87, 0, .12);
    color: var(--orange);
    border-radius: 0 1.5rem 1.5rem 0;
 }
 
-nav a.active .material-icons-outlined {
+nav li.active .material-icons-outlined {
    color: var(--orange);
 }
 
