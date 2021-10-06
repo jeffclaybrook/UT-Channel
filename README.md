@@ -1,3 +1,1 @@
-GOOD SO FAR ON DESKTOP
-
-NEED TO UPDATE FOR TABLET/MOBILE RESPONSIVENESS
+https://jeffclaybrook.github.io/UT-Channel/
