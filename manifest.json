@@ -3,7 +3,7 @@
     "short_name": "UT Healthier TV",
     "start_url": "https://jeffclaybrook.github.io/UT-Channel/",
     "background_color": "#fff",
-    "display": "minimal-ui",
+    "display": "standalone",
     "scope": "/",
     "capture_links": "none",
     "prefer_related_applications": false,
