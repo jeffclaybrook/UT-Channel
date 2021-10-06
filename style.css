@@ -1,8 +1,8 @@
 :root {
-   --hover: #f1f3f4;
    --black: #202124;
    --gray: #616161;
    --gray-bold: #5f6368;
+   --hover: #f1f3f4;
    --orange: #BF5700;
 }
 
@@ -18,14 +18,15 @@
 
 html {
    font-size: 16px;
+   scroll-behavior: smooth;
+   text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -webkit-text-size-adjust: 100%;
-   text-rendering: optimizeLegibility;
 }
 
 body {
-   font-size: 100%;
    font-family: 'Google Sans', sans-serif;
+   font-size: 100%;
    letter-spacing: .01428571em;
 }
 
@@ -34,29 +35,29 @@ img, video {
 }
 
 svg {
+   direction: ltr;
    font-feature-settings: liga;
-   font-weight: normal;
    font-style: normal;
-   line-height: 1;
+   font-weight: normal;
    letter-spacing: normal;
+   line-height: 1;
    text-transform: none;
    white-space: nowrap;
    word-wrap: normal;
-   direction: ltr;
    -webkit-font-feature-settings: liga;
    -webkit-font-smoothing: antialiased;
 }
 
 a {
-   text-decoration: none;
    cursor: pointer;
+   text-decoration: none;
 }
 
 button {
-   border: none;
-   outline: none;
    background: transparent;
+   border: none;
    cursor: pointer;
+   outline: none;
 }
 
 ul {
@@ -64,14 +65,14 @@ ul {
 }
 
 .icon-btn {
-   width: 2.75rem;
-   height: 2.75rem;
-   border-radius: 50%;
    background: transparent;
+   border-radius: 50%;
    color: var(--gray);
    display: inline-flex;
    align-items: center;
    justify-content: center;
+   height: 2.75rem;
+   width: 2.75rem;
 }
 
 .icon-btn svg {
@@ -83,17 +84,17 @@ ul {
 }
 
 header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
    background: #fff;
-   padding: .5rem .75rem;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   padding: .5rem .75rem;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
    z-index: 3;
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 }
 
 header aside {
@@ -104,21 +105,21 @@ header aside {
 .brand {
    display: flex;
    align-items: center;
-   margin-left: .5rem;
    margin-right: .5rem;
+   margin-left: .5rem;
 }
 
 .brand .logo {
-   width: 2.5rem;
-   height: 2.5rem;
    border-radius: 50%;
    display: flex;
+   height: 2.5rem;
+   width: 2.5rem;
 }
 
 .brand span {
-   margin-left: .75rem;
    color: var(--black);
    font-size: 1.125rem;
+   margin-left: .75rem;
 }
 
 .brand:hover span {
@@ -126,15 +127,15 @@ header aside {
 }
 
 .search-field {
+   background: var(--hover);
+   border-radius: .5rem;
    display: flex;
    align-items: center;
    flex-basis: 50%;
    max-width: 50%;
+   height: 3rem;
    margin: 0 auto;
    position: relative;
-   background: var(--hover);
-   border-radius: .5rem;
-   height: 3rem;
 }
 
 .search-field label {
@@ -142,19 +143,18 @@ header aside {
 }
 
 .search-field button {
-   position: absolute;
-   z-index: 2;
-   top: 50%;
-   transform: translateY(-50%);
-   right: .75rem;
-   width: 2.25rem;
-   height: 2.25rem;
    border-radius: 50%;
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   
    fill: var(--gray-bold);
+   position: absolute;
+   top: 50%;
+   right: .75rem;
+   transform: translateY(-50%);
+   height: 2.25rem;
+   width: 2.25rem;
+   z-index: 2;
 }
 
 .search-field button:hover {
@@ -162,20 +162,20 @@ header aside {
 }
 
 .search-field input {
-   width: 100%;
    background: var(--hover);
    border: none;
-   outline: none;
    border-radius: .5rem;
    font-size: 1rem;
+   outline: none;
    padding: .75rem 1.25rem;
+   width: 100%;
 }
 
 .cta {
-   margin-right: .5rem;
    display: flex;
    align-items: center;
    gap: .25rem;
+   margin-right: .5rem;
 }
 
 .cta .icon-btn:nth-child(1) svg {
@@ -183,27 +183,27 @@ header aside {
 }
 
 .avatar {
-   width: 2.5rem;
-   height: 2.5rem;
    border-radius: 50%;
    display: flex;
    margin-left: .25rem;
+   height: 2.5rem;
+   width: 2.5rem;
 }
 
 nav {
    background: #fff;
-   position: fixed;
+   box-shadow: 0 0 0 rgb(0 0 0 / 0%);
+   display: flex;
+   flex-direction: column;
    max-width: 15rem;
    width: 100%;
    height: 100vh;
-   transition: all 0.375s ease;
    overflow-y: scroll;
-   display: flex;
-   flex-direction: column;
-   z-index: 2;
+   position: fixed;
    left: -15rem;
    top: 3rem;
-   box-shadow: 0 0 0 rgb(0 0 0 / 0%);
+   transition: all 0.375s ease;
+   z-index: 2;
 }
 
 nav ul {
@@ -213,8 +213,8 @@ nav ul {
 }
 
 nav a {
-   display: block;
    color: var(--black);
+   display: block;
    font-size: .875rem;
    font-weight: 400;
    padding-left: 1.5rem;
@@ -222,23 +222,23 @@ nav a {
 }
 
 nav svg {
-   fill: var(--gray-bold);
-   opacity: .8;
-   font-size: 1.375rem;
    display: inline-block;
+   fill: var(--gray-bold);
+   font-size: 1.375rem;
+   opacity: .8;
    vertical-align: middle;
 }
 
 nav li:hover a {
    background: var(--hover);
-   color: var(--black);
    border-radius: 0 1.5rem 1.5rem 0;
+   color: var(--black);
 }
 
 nav li.active a {
    background: rgba(191, 87, 0, .12);
-   color: var(--orange);
    border-radius: 0 1.5rem 1.5rem 0;
+   color: var(--orange);
 }
 
 nav li.active svg {
@@ -246,8 +246,8 @@ nav li.active svg {
 }
 
 nav a .item {
-   margin-left: 1rem;
    display: inline-block;
+   margin-left: 1rem;
    vertical-align: middle;
 }
 
@@ -259,16 +259,16 @@ hr {
 }
 
 nav.expanded {
-   left: 0;
    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+   left: 0;
 }
 
 main {
-   top: 3rem;
-   z-index: 1;
-   position: relative;
-   transition: all 0.375s ease;
    padding: 0 1rem;
+   position: relative;
+   top: 3rem;
+   transition: all 0.375s ease;
+   z-index: 1;
 }
 
 nav.expanded+main {
@@ -276,14 +276,14 @@ nav.expanded+main {
 }
 
 .hero {
-   width: 100%;
    padding-top: 1.75rem;
+   width: 100%;
 }
 
 .hero img {
-   width: 100%;
-   display: flex;
    border-radius: .25rem;
+   display: flex;
+   width: 100%;
 }
 
 .grid-container {
@@ -295,8 +295,8 @@ nav.expanded+main {
 }
 
 .card {
-   width: 100%;
    transition: .2s ease;
+   width: 100%;
 }
 
 .card:hover {
@@ -304,21 +304,21 @@ nav.expanded+main {
 }
 
 .card-media img {
-   width: 100%;
    border-radius: .25rem;
    display: flex;
+   width: 100%;
 }
 
 .card-body {
+   display: flex;
    align-items: flex-start;
    margin-top: .75rem;
-   display: flex;
 }
 
 .card-body img {
-   width: 2rem;
-   margin-right: .625rem;
    border-radius: 50%;
+   margin-right: .625rem;
+   width: 2rem;
 }
 
 .card-details h3 {
@@ -330,16 +330,16 @@ nav.expanded+main {
    text-overflow: ellipsis;
    overflow: hidden;
    white-space: normal;
-   -webkit-line-clamp: 2;
    display: -webkit-box;
-   -webkit-box-orient: vertical;
    word-break: break-word;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
 }
 
 .card-details p {
    color: var(--gray-bold);
-   font-weight: 400;
    font-size: .8125rem;
+   font-weight: 400;
 }
 
 .card-details p:nth-of-type(1) {
@@ -347,11 +347,11 @@ nav.expanded+main {
 }
 
 main {
-   top: 3rem;
-   z-index: 1;
-   position: relative;
-   transition: all 0.375s ease;
    padding: 0 1rem;
+   position: relative;
+   top: 3rem;
+   transition: all 0.375s ease;
+   z-index: 1;
 }
 
 article {
@@ -388,22 +388,22 @@ article {
 }
 
 .video-details {
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
-   padding-bottom: 1rem;
    border-bottom: 1px solid rgb(241, 237, 237);
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   padding-bottom: 1rem;
 }
 
 .video-details h1 {
+   color: var(--black);
    font-size: 1.25rem;
    font-weight: 500;
-   color: var(--black);
 }
 
 .video-details p {
-   font-size: .875rem;
    color: var(--gray);
+   font-size: .875rem;
 }
 
 .video-cta-buttons {
@@ -423,50 +423,50 @@ article {
 }
 
 .publisher {
+   border-bottom: 1px solid rgb(241, 237, 237);
    display: flex;
    align-items: flex-start;
    padding-top: 1rem;
    padding-bottom: 1rem;
-   border-bottom: 1px solid rgb(241, 237, 237);
 }
 
 .publisher img {
-   width: 2.5rem;
    border-radius: 50%;
    margin-right: .5rem;
+   width: 2.5rem;
 }
 
 .publisher h4 {
-   font-size: 1.125rem;
    color: var(--black);
+   font-size: 1.125rem;
    font-weight: 400;
 }
 
 .publisher p {
-   font-size: .875rem;
    color: var(--gray);
+   font-size: .875rem;
 }
 
 .publisher button {
-   margin-left: auto;
    background: var(--orange);
+   border-radius: .325rem;
    color: #fff;
    display: inline-block;
-   padding: .5rem 1.5rem;
-   border-radius: .325rem;
    font-size: .875rem;
-   text-transform: uppercase;
    letter-spacing: .03rem;
+   margin-left: auto;
+   padding: .5rem 1.5rem;
+   text-transform: uppercase;
 }
 
 .comments {
-   padding: 1rem 0 1rem 3rem;
    border-bottom: 1px solid rgb(241, 237, 237);
+   padding: 1rem 0 1rem 3rem;
 }
 
 .comments h5 {
-   font-size: .875rem;
    color: var(--gray);
+   font-size: .875rem;
    font-weight: 500;
    margin-bottom: 1rem;
 }
@@ -481,11 +481,11 @@ article {
 }
 
 .comment img {
-   width: 2.25rem;
-   height: 2.25rem;
    border-radius: 50%;
-   margin-right: .5rem;
    display: flex;
+   margin-right: .5rem;
+   height: 2.25rem;
+   width: 2.25rem;
 }
 
 .comment label {
@@ -493,30 +493,30 @@ article {
 }
 
 .comment input {
-   border: 0;
-   outline: 0;
-   border-bottom: 1px solid #ccc;
-   width: 100%;
    background: transparent;
+   border: 0;
+   border-bottom: 1px solid #ccc;
+   outline: 0;
+   width: 100%;
 }
 
 .comment h5 {
-   font-size: .85rem;
    color: var(--black);
+   font-size: .85rem;
    font-weight: 500;
    margin-bottom: .25rem;
 }
 
 .comment h5 span {
-   font-weight: 500;
    color: var(--gray);
+   font-size: 500;
+   font-weight: 500;
    margin-left: .5rem;
-   font-size: .8125rem;
 }
 
 .comment p {
-   font-size: .8125rem;
    color: var(--gray);
+   font-size: .8125rem;
    font-weight: 400;
    line-height: 1.5;
 }
@@ -530,46 +530,46 @@ article {
 
 .related-video {
    display: flex;
-   width: 100%;
    justify-content: space-between;
-   margin-bottom: .75rem;
    gap: .625rem;
+   margin-bottom: .75rem;
+   width: 100%;
 }
 
 .related-video-thumbnail {
+   display: flex;
    flex-basis: 45%;
    max-width: 45%;
-   display: flex;
    width: 100%;
 }
 
 .related-video-details {
-   flex-basis: 54%;
-   max-width: 54%;
    display: flex;
    flex-direction: column;
+   flex-basis: 54%;
+   max-width: 54%;
    width: 100%;
 }
 
 .related-video-details h3 {
    color: var(--black);
+   display: -webkit-box;
    font-size: .875rem;
    font-weight: 500;
    line-height: calc(.8125rem + 6px);
    margin-bottom: .25rem;
-   text-overflow: ellipsis;
    overflow: hidden;
+   text-overflow: ellipsis;
    white-space: normal;
-   -webkit-line-clamp: 2;
-   display: -webkit-box;
-   -webkit-box-orient: vertical;
    word-break: break-word;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
 }
 
 .related-video-details p {
    color: var(--gray-bold);
-   font-weight: 400;
    font-size: .875rem;
+   font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -592,8 +592,8 @@ article {
       flex-wrap: wrap;
    }
    .video-container {
-      max-width: 100%;
       flex-basis: 100%;
+      max-width: 100%;
    }
    .video-details {
       flex-wrap: wrap;
@@ -605,8 +605,8 @@ article {
       padding: 1rem 0;
    }
    .related-videos {
-      max-width: 100%;
       flex-basis: 100%;
+      max-width: 100%;
    }
 }
 
@@ -618,8 +618,8 @@ article {
       display: none;
    }
    .search-field {
-      max-width: 65%;
       flex-basis: 65%;
+      max-width: 65%;
       width: 100%;
    }
    nav.expanded+main {
@@ -632,14 +632,14 @@ article {
       flex-wrap: wrap;
    }
    .video-container {
-      max-width: 100%;
       flex-basis: 100%;
+      max-width: 100%;
    }
    .comments {
       padding: 1rem 0;
    }
    .related-videos {
+      flex-basis: 100%;
       max-width: 100%;
-      flex-basis: 100%
    }
 }
