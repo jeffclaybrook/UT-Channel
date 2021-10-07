@@ -1,9 +1,9 @@
 {
     "name": "UT Healthier TV",
     "short_name": "UT Healthier TV",
-    "start_url": "https://jeffclaybrook.github.io/UT-Channel/",
+    "start_url": "/",
     "background_color": "#fff",
-    "display": "standalone",
+    "display": "fullscreen",
     "scope": "/",
     "capture_links": "none",
     "prefer_related_applications": false,
@@ -20,7 +20,7 @@
             "src": "images/icon-512.png",
             "type": "image/png",
             "sizes": "512x512",
-            "purpose": "any"
+            "purpose": "maskable"
         }
     ]
 }

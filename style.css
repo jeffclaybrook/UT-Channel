@@ -1,5 +1,5 @@
 :root {
-   --black: #202124;
+   --black: #171717;
    --gray: #616161;
    --gray-bold: #5f6368;
    --hover: #f1f3f4;
@@ -25,8 +25,9 @@ html {
 }
 
 body {
-   font-family: 'Google Sans', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 16px;
+   line-height: 1.5;
    letter-spacing: .01428571em;
 }
 
